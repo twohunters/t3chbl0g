@@ -2,7 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Post, User, Comment } = require("../../models");
 
-router.get("/", withAuth, (req, res) => {
+router.get("/", (req, res) => {
     Post.findAll({
         attributes: ["id", "title", "content", "created_at"],
         order: [["created_at", "DESC"]],
@@ -28,7 +28,7 @@ router.get("/", withAuth, (req, res) => {
         })
 });
 
-router.get("/:id", withAuth, (req, res) => {
+router.get("/:id", (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
