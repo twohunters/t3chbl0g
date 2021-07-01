@@ -11,6 +11,19 @@ router.get("/", withAuth, (req, res) => {
         })
 });
 
+router.get("/:id", (req, res) => {
+    Comment.findAll({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(commentData => res.json(commentData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+})
+
 router.post("/", withAuth, (req, res) => {
     Comment.create({
         comment_text: req.body.comment_text,
