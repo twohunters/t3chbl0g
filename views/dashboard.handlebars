@@ -8,6 +8,9 @@
             {{> post-info post}}
             <a href="/post/{{post.id}}">{{post.title}}</a>
             <p>Posted by {{post.user.username}} on {{format_date post.created_at}}</p>
+            <div>
+                <button class="button"><a href="/dashboard/edit/{{post.id}}">Edit Post</a></button>
+            </div>
         </div>
     </div>
     {{/each}}
@@ -17,10 +20,11 @@
 
     {{#if loggedIn}}
     <div>
-        <button><a href="/dashboard/new">New Post</a></button>
+        <button class="button"><a href="/dashboard/new">New Post</a></button>
     </div>
     {{else}}
     <p>No posts to display!</p>
+    {{/if}}
 </div>
 
 <script src="/js/new.js"></script>
