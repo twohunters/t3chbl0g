@@ -13,26 +13,28 @@
 <body>
     <div>
         <header>
-            <h1>
-                <a href="/">t3chbl0g</a>
-            </h1>
-            <nav>
-            {{#if loggedIn}}
-            <a href="/">Home</a>
-            <a href="/dashboard">Dashboard</a>
-            <button id="logout">logout</button>
-            {{else}}
-            <a href="/">Home</a>
-            <a href="/dashboard">Dashboard</a>
-            <button><a href="/login">Login</a></button>
-            {{/if}}
-        </nav>
+            <nav class="nav">
+                <h1>
+                    <a href="/">t3chbl0g</a>
+                </h1>
+                {{#if loggedIn}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout">logout</button>
+                {{else}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <button><a href="/login">Login</a></button>
+                {{/if}}
+            </nav>
         </header>
         <main>
             {{{ body }}}
         </main>
     </div>
+    {{#if loggedIn}}
     <script src="/js/loggedOut.js"></script>
+    {{/if}}
 </body>
 
 </html>
