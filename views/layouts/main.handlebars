@@ -18,12 +18,12 @@
                     <a href="/">t3chbl0g</a>
                 </h1>
                 {{#if loggedIn}}
-                <a href="/">Home</a>
-                <a href="/dashboard">Dashboard</a>
+                <button><a href="/">Home</a></button>
+                <button><a href="/dashboard">Dashboard</a></button>
                 <button id="logout">logout</button>
                 {{else}}
-                <a href="/">Home</a>
-                <a href="/dashboard">Dashboard</a>
+                <button><a href="/">Home</a></button>
+                <button><a href="/dashboard">Dashboard</a></button>
                 <button><a href="/login">Login</a></button>
                 {{/if}}
             </nav>
@@ -33,7 +33,7 @@
         </main>
     </div>
     {{#if loggedIn}}
-    <script src="/js/loggedOut.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 </body>
 
