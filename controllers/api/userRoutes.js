@@ -22,7 +22,7 @@ router.get("/:id", (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ["id", "title", "content", "created_at"]
+                attributes: ["id", "title", "body", "created_at"]
             },
             {
                 model: Comment,
@@ -49,13 +49,13 @@ router.get("/:id", (req, res) => {
 
 router.post("/", withAuth, (req, res) => {
     User.create({
-        username: req.body.username,
+        email: req.body.email,
         password: req.body.password
     })
         .then(userData => {
             req.session.save(() => {
                 req.session.user_id = userData.id;
-                req.session.username = userData.username;
+                req.session.email = userData.email;
                 req.session.loggedIn = true;
                 res.json(userData);
             })
@@ -86,7 +86,7 @@ router.post("/login", withAuth, (req, res) => {
             }
             req.session.save(() => {
                 req.session.user_id = userData.id;
-                req.session.username = userData.username;
+                req.session.email = userData.email;
                 req.session.loggedIn = true;
                 res.json({ user: userData, message: "Login successful" })
             })
