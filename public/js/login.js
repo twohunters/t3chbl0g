@@ -10,7 +10,7 @@ const loginFormHandler = async (event) => {
             email: email.value,
             password: password.value,
         }),
-        headers: { "Content-Type": "aplication/json" }
+        headers: { "Content-Type": "application/json" }
     });
 
     if (response.ok) {
