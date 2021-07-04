@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a CMS blog about tech! Developers can make an account, log in with a unique username and password, publish their own work and comment on posts by other users.
+This is a CMS blog about tech! Developers can register and login in with a unique account and write about their projects.
 
 
 ## Installation
@@ -12,15 +12,12 @@ Type the following into your terminal or command line to copy this repository:
 
 `git clone git@github.com:twohunters/t3chbl0g.git`
 
+Install the necessary dependencies with `npm i` and run the program with `npm start`.
+
 
 ## Usage
 
-instructions go here
-
-
-## Credits
-
-[Jason Anderson](https://github.com/twohunters)
+A user is able to sign up or login with a unique account, which is stored locally using a MySQL database. When the user is logged in, they are able to create, edit and delete posts, and leave comments on posts written by other users.
 
 
 ## Technology
@@ -40,6 +37,11 @@ instructions go here
 [express-session](https://www.npmjs.com/package/express-session)
 
 [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+
+
+## Credits
+
+[Jason Anderson](https://github.com/twohunters)
 
 
 ## License
