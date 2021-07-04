@@ -1,17 +1,19 @@
-<div>
-    <h1>Sign Up</h1>
-    <form id="signup-form">
-        <div>
-            <label>Email</label>
-            <input type="email" id="email-signup">
+<div class="mx-auto m-4" style="width: 18rem;">
+    <div class="mx-auto m-4">
+        <h3>Sign Up</h3>
+    </div>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="email-login">Email address</label>
+            <input type="email" class="form-control" id="email-login" placeholder="Enter email">
         </div>
-        <div>
-            <label>Password</label>
-            <input type="password" id="password-signup">
+        <div class="form-group">
+            <label for="password-login">Password</label>
+            <input type="password" class="form-control" id="password-login" placeholder="Enter password">
         </div>
-        <div>
-            <button type="submit" id="signup">Sign Up</button>
-            <button><a href="/login">Log In</a></button>
+        <div class="form-group">
+            <button class="btn btn-light" type="submit" id="signup">Sign Up</button>
+            <a class="btn btn-light" href="/login" role="button">Login</a>
         </div>
     </form>
 </div>
