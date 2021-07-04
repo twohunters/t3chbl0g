@@ -1,20 +1,23 @@
 <div>
     <h1>Edit Post</h1>
-        <label for="title">Post Title</label>
-        <textarea class="textarea" type="text" id="title">{{post.title}}</textarea>
-    </div>
-    <div>
-        <label for="content">Content</label>
-        <textarea class="textarea" type="text" id="content">{{post.content}}</textarea>
-    </div>
-    <div>
-        <button class="button" id="update">Update Post</button>
-        <button class="button" id="delete">Delete Post</button>
-    </div>
-    <div>
-        <a href="/dashboard">Back to Dashboard</a>
-    </div>
+    <form id="edit-post-form">
+        <div>
+            <label for="post-title">Title</label>
+            <textarea type="text">{{post.title}}</textarea>
+        </div>
+        <div>
+            <label for="post-body">Body</label>
+            <textarea type="text">{{post.body}}</textarea>
+        </div>
+        <div>
+            <button type="submit" id="update">Update Post</button>
+            <button type="submit" id="delete">Delete Post</button>
+        </div>
+        <div>
+            <a href="/dashboard">Back to Dashboard</a>
+        </div>
+    </form>
 </div>
 
-<script src ="/js/edit.js"></script>
-<script src ="/js/delete.js"></script>
+<script src="/js/edit.js"></script>
+<script src="/js/delete.js"></script>
