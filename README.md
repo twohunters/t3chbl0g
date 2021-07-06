@@ -19,6 +19,8 @@ Install the necessary dependencies with `npm i` and run the program with `npm st
 
 A user is able to sign up or login with a unique account, which is stored locally using a MySQL database. When the user is logged in, they are able to create, edit and delete posts, and leave comments on posts written by other users.
 
+View the deployed app on Heroku [here](https://mighty-tundra-73148.herokuapp.com/).
+
 
 ## Technology
 
